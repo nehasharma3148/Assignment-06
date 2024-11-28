@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India and World Maps</title>
+</head>
+<body>
+    <h1>India and World Maps</h1>
+
+    <p>Click on the images below to explore maps of India and the world.</p>
+
+    <div>
+        <h2>India Map</h2>
+        <img src="https://www.indiatravelblog.net/wp-content/uploads/2020/05/india-states-and-union-territories-map-.png" height="150px" alt="India Map" onclick="openIndiaMap()">
+    </div>
+
+    <div>
+        <h2>World Map</h2>
+        <img src="https://th.bing.com/th/id/OIP.7Fiu6kAd3Nof8bFbSHJP5gHaFl?w=200&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" height="150px" alt="World Map" onclick="openWorldMap()">
+    </div>
+
+    <script>
+        function openIndiaMap() {
+            window.open("india_states.html", "_blank");
+        }
+
+        function openWorldMap() {
+            window.open("world_countries.html", "_blank");
+        }
+    </script>
+</body>
+</html>

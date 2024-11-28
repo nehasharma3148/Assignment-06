@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps of India and the World</title>
+    <style>
+        
+        img {
+            width: 300px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Maps of India and the World</h1>
+    <h2>Select a Map:</h2>
+    
+    <div>
+        <h3><a href="#" onclick="showIndiaMap()">Map of India</a></h3>
+        <h3><a href="#" onclick="showWorldMap()">Map of the World</a></h3>
+    </div>
+
+    <div id="mapDisplay" style="display:none;">
+        <div id="indiaMap" style="display:none;">
+            <h3>Map of India</h3>
+            <img src="https://www.indiatravelblog.net/wp-content/uploads/2020/05/india-states-and-union-territories-map-.png" height="150px" alt="Map of India" onclick="showStateInfo()">
+            <div id="stateInfo" style="display:none;">
+                <p><strong>Maharashtra:</strong> Known for its vibrant culture and the city of Mumbai.</p>
+                <p><strong>Karnataka:</strong> Home to IT hubs like Bangalore and rich in heritage.</p>
+                <p><strong>Tamil Nadu:</strong> Famous for its temples and classical music.</p>
+                <p><strong>West Bengal:</strong> Renowned for its art, culture, and the city of Kolkata.</p>
+                <!-- Add more states as needed -->
+            </div>
+        </div>
+
+        <div id="worldMap" style="display:none;">
+            <h3>Map of the World</h3>
+            <img src="https://th.bing.com/th/id/OIP.7Fiu6kAd3Nof8bFbSHJP5gHaFl?w=200&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Map of the World" onclick="showCountries()">
+            <div id="countryList" style="display:none;">
+                <ul>
+                    <li>United States</li>
+                    <li>Canada</li>
+                    <li>India</li>
+                    <li>China</li>
+                    <li>Brazil</li>
+                    <li>Australia</li>
+                    <!-- Add more countries as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showIndiaMap() {
+            document.getElementById('mapDisplay').style.display = 'block';
+            document.getElementById('indiaMap').style.display = 'block';
+            document.getElementById('worldMap').style.display = 'none';
+        }
+
+        function showWorldMap() {
+            document.getElementById('mapDisplay').style.display = 'block';
+            document.getElementById('indiaMap').style.display = 'none';
+            document.getElementById('worldMap').style.display = 'block';
+        }
+
+        function showStateInfo() {
+            const stateInfo = document.getElementById('stateInfo');
+            stateInfo.style.display = stateInfo.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function showCountries() {
+            const countryList = document.getElementById('countryList');
+            countryList.style.display = countryList.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>
